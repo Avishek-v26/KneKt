@@ -12,43 +12,51 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f4;
+            background: url('https://img.freepik.com/free-vector/purple-pink-smoke-dark_52683-83785.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
         .form-container {
             width: 300px;
             padding: 20px;
-            background: white;
+            background: purple; /* Changed background color to purple */
+            color: white; /* Updated text color for better contrast */
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Ensures padding is included in width */
         }
         .form-container h2 {
             text-align: center;
+            margin-bottom: 20px;
         }
         .form-container input {
-            width: 100%;
+            width: calc(100% - 20px);
             margin: 10px 0;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container input::placeholder {
+            color: #aaa; /* Light gray placeholder text */
         }
         .form-container button {
             width: 100%;
             padding: 10px;
-            background: #007bff;
+            background: #0056b3; /* Dark blue for button */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         .form-container button:hover {
-            background: #0056b3;
+            background: #003d80; /* Even darker blue for hover effect */
         }
         .form-container .create-account {
             text-align: center;
             margin-top: 10px;
         }
         .form-container .create-account a {
-            color: #007bff;
+            color: #ffddff; /* Light purple link */
             text-decoration: none;
         }
         .form-container .create-account a:hover {
