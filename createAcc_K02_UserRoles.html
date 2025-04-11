@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://img.freepik.com/free-vector/shiny-lights-line-effect-background-wallpaper-design_1017-27059.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Align buttons vertically */
+            align-items: center; /* Center buttons horizontally */
+            gap: 25px; /* Spacing between buttons */
+        }
+        .button-container button {
+            width: 300px; /* Button width */
+            height: 100px; /* Button height */
+            font-size: 24px; /* Button font size */
+            color: white;
+            background-color: purple; /* Changed background color to purple */
+            border: none;
+            border-radius: 30px; /* Rounded corners */
+            cursor: pointer;
+        }
+        .button-container button:hover {
+            background-color: #6a0dad; /* Darker purple hover effect */
+        }
+        .note {
+            font-size: 32px; /* Font size for the note */
+            font-weight: bold; /* Bold font */
+            color: white; /* White font color */
+            margin-bottom: 10px; /* Spacing below the note */
+            text-align: center;
+        }
+        .back-button {
+            position: absolute; /* Set position to absolute */
+            bottom: 20px; /* Place 20px from the bottom */
+            right: 20px; /* Place 20px from the right */
+            width: 200px; /* Back button width */
+            height: 70px; /* Back button height */
+            font-size: 20px; /* Font size for Back button */
+            color: white;
+            background-color: #007bff; /* Blue background */
+            border: none;
+            border-radius: 20px; /* Rounded corners */
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #0056b3; /* Darker blue hover effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <p class="note">Choose your role?</p> <!-- Text note -->
+        <button onclick="location.href='student.html'">Student</button>
+        <button onclick="location.href='professional.html'">Professional</button>
+    </div>
+    <!-- Back button positioned in the bottom-right corner -->
+    <button class="back-button" onclick="history.back()">Back</button>
+</body>
+</html>
