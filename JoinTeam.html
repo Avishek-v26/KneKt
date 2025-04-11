@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Team</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #111827;
+      color: white;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 270px;
+      background-color: #1f2937;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 20px;
+    }
+
+    .nav-item {
+      background-color: #4f46e5;
+      border-radius: 10px;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .sub-nav {
+      background-color: #374151;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .sub-nav div {
+      padding: 8px;
+      border-bottom: 1px solid #4b5563;
+      font-size: 14px;
+    }
+
+    .sub-nav div:last-child {
+      border-bottom: none;
+    }
+
+    .promo-box {
+      background-color: #4f46e5;
+      padding: 12px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .user-info {
+      background-color: #1f2937;
+      border: 1px solid #4b5563;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .avatar {
+      background-color: #4b5563;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 60px 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-content h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .main-content p {
+      font-size: 16px;
+      color: #b0b0b0;
+      margin-bottom: 5px;
+    }
+
+    .main-content .slogan {
+      margin-top: 10px;
+      font-style: italic;
+      color: #9ca3af;
+    }
+
+    .image-wrapper {
+      margin: 30px 0;
+    }
+
+    .image-wrapper img {
+      max-width: 250px;
+    }
+
+    .btn {
+      background-color: #4f46e5;
+      color: white;
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #4338ca;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div>
+      <div class="logo">🚀 Kenkt</div>
+
+      <div class="sidebar-section">
+        <div class="nav-item">My Team</div>
+        <div class="sub-nav">
+          <div>Team Code Library</div>
+          <div>Team Media Assets</div>
+          <div>Team Design Library</div>
+          <div>Team API Library</div>
+        </div>
+      </div>
+
+      <div class="promo-box">
+        <strong>invite a Friend</strong><br>
+        Make a work effective!<br>
+        <small></small>
+      </div>
+
+      <div class="promo-box" style="margin-top: 10px;">
+        <strong></strong><br>
+        Collaborate with your team<br>
+      </div>
+    </div>
+
+    <div class="user-info">
+      <div class="avatar"></div>
+      <div>
+        <strong>User..xyz</strong><br>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="image-wrapper">
+      <img src="https://cdn4.iconfinder.com/data/icons/users1-1/24/Two-Males_1-512.png" alt="Join Team Icon">
+    </div>
+
+    <h1>Join a team and collaborate</h1>
+    <p>Be a part of something amazing. Join your team now to access shared resources,</p>
+    <p>collaborate in real-time, and contribute to a common goal.</p>
+
+    <button class="btn" onclick="joinTeam()">Join Team</button>
+  </div>
+
+  <script>
+    function joinTeam() {
+      alert("Joining the team... (You can link this to actual functionality)");
+    }
+  </script>
+
+</body>
+</html>
