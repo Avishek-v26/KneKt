@@ -74,7 +74,7 @@
 
         <!-- Personal Info Section -->
         <div>
-            <p class="section-title">Personal Info</p> <!-- Correctly displayed section title -->
+            <p class="section-title">Personal Info</p>
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
             
@@ -93,16 +93,68 @@
         
         <!-- Educational Details Section -->
         <div>
-            <p class="section-title">Educational Details</p> <!-- Correctly displayed section title -->
+            <p class="section-title">Educational Details</p>
             <label for="qualification">Educational Qualification</label>
-            <input type="text" id="qualification" name="qualification" placeholder="Enter your highesteducational qualification" required>
+            <select id="qualification" name="qualification" required>
+                <option value="" disabled selected>Select your qualification</option>
+                <option value="Higher Secondary">Higher Secondary</option>
+                <option value="Bachelors">Bachelors</option>
+                <option value="Masters">Masters</option>
+                <option value="PhD">PhD</option>
+                <option value="Postdoc">Postdoc</option>
+                <option value="Others">Others</option>
+            </select>
+            
+            <!-- New input fields -->
+            <label for="qualifying-year">Qualifying Year</label>
+            <!-- <input type="number" id="qualifying-year" name="qualifying-year" placeholder="Enter your qualifying year" required> -->
+            <select id="qualifying-year" name="qualifying-year" required>
+                <option value="" disabled selected>Select your qualifying-year</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+            </select>
+            
+            <label for="marks">Marks Obtained</label>
+            <input type="text" id="marks" name="marks" placeholder="Enter your Percentage/GPA/Grades" required>
         </div>
         
         <!-- Interest Section -->
         <div>
-            <p class="section-title">Interest</p> <!-- Correctly displayed section title -->
+            <p class="section-title">Interest</p>
             <label for="field">Field of Interest</label>
-            <input type="text" id="field" name="field" placeholder="Enter your field of interest" required>
+            <!-- <input type="text" id="field" name="field" placeholder="Enter your field of interest" required> -->
+            <select id="qualification" name="qualification" required>
+                <option value="" disabled selected>Select your qualification</option>
+                <option value="AI/ML">AI/ML</option>
+                <option value="IOT">IOT</option>
+                <option value="Cyber Security">Cyber Security</option>
+                <option value="Web Devlopment">Web Development</option>
+                <option value="Blockchain">Blockchain</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Management">Management</option>
+                <option value="Software Development">Software Development</option>
+                <option value="Game Development">Game Development</option>
+                <option value="Research Work">Research Work</option>
+                <option value="Space Technology">Space Technology</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="Content Creation">Content Creation</option>
+                <option value="Others">Others</option>
+                </select>
+            </select>
             
             <label for="hobbies">Hobbies</label>
             <textarea id="hobbies" name="hobbies" placeholder="Enter your hobbies" rows="4"></textarea>
