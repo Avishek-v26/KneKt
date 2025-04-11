@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+            margin: 0;
+            background: url('https://img.freepik.com/free-vector/black-background-with-wavy-lines-copy-space_474888-5368.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .form-container {
+            width: 600px; /* Increased width for a wider boundary */
+            padding: 30px; /* Added more padding for internal spacing */
+            background: rgb(174, 14, 163);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(231, 64, 64, 0.2); /* Enhanced shadow for emphasis */
+            box-sizing: border-box;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e87698; /* Form title color */
+        }
+        .section-title {
+            margin-top: 20px; /* Add spacing above section title */
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-decoration: underline; /* Highlight section titles */
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: white; /* Updated font color to white */
+        }
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 15px; /* Slightly increased padding for better clickability */
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background: #23a2f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Correctly displays form title -->
+        <h2>Professional Details</h2>
+
+        <!-- Personal Info Section -->
+        <div>
+            <p class="section-title">Personal Info</p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="state">Residing State</label>
+            <input type="text" id="state" name="state" placeholder="Enter your residing state" required>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div>
+            <p class="section-title">Work Experience</p>
+            <label for="Job role">Job role</label>
+            <input type="text" id="jobrole" name="jobrole" placeholder="Enter your Job Role" required>
+            
+            <label for="Experience">Experience</label>
+            <input type="number" id="experience" name="experience" placeholder="Enter your Experience (in yrs)" required>
+            
+            <label for="Organization">Organization</label>
+            <input type="text" id="org" name="org" placeholder="Enter your Organization/Institution name" optional>
+        </div>
+        
+        <!-- Educational Details Section -->
+        <div>
+            <p class="section-title">Educational Details</p>
+            <label for="qualification">Educational Qualification</label>
+            <select id="qualification" name="qualification" required>
+                <option value="" disabled selected>Select your qualification</option>
+                <option value="Higher Secondary">Higher Secondary</option>
+                <option value="Bachelors">Bachelors</option>
+                <option value="Masters">Masters</option>
+                <option value="PhD">PhD</option>
+                <option value="Postdoc">Postdoc</option>
+                <option value="Others">Others</option>
+            </select>
+            
+            <!-- New input fields -->
+            <label for="qualifying-year">Qualifying Year</label>
+            <!-- <input type="number" id="qualifying-year" name="qualifying-year" placeholder="Enter your qualifying year" required> -->
+            <select id="qualifying-year" name="qualifying-year" required>
+                <option value="" disabled selected>Select your qualifying-year</option>
+                <option value="1994">2010</option>
+                <option value="1995">2011</option>
+                <option value="1996">2012</option>
+                <option value="1997">2013</option>
+                <option value="1998">2014</option>
+                <option value="1999">2015</option>
+                <option value="2000">2016</option>
+                <option value="2001">2017</option>
+                <option value="2002">2018</option>
+                <option value="2003">2019</option>
+                <option value="2004">2020</option>
+                <option value="2005">2021</option>
+                <option value="2006">2022</option>
+                <option value="2007">2023</option>
+                <option value="2008">2024</option>
+                <option value="2009">2025</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+            </select>
+            
+            <label for="marks">Marks Obtained</label>
+            <input type="text" id="marks" name="marks" placeholder="Enter your Percentage/GPA/Grades" required>
+        </div>
+        
+        <!-- Interest Section -->
+        <div>
+            <p class="section-title">Interest</p>
+            <label for="field">Field of Interest</label>
+            <!-- <input type="text" id="field" name="field" placeholder="Enter your field of interest" required> -->
+            <select id="qualification" name="qualification" required>
+                <option value="" disabled selected>Select your qualification</option>
+                <option value="AI/ML">AI/ML</option>
+                <option value="IOT">IOT</option>
+                <option value="Cyber Security">Cyber Security</option>
+                <option value="Web Devlopment">Web Development</option>
+                <option value="Blockchain">Blockchain</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Management">Management</option>
+                <option value="Software Development">Software Development</option>
+                <option value="Game Development">Game Development</option>
+                <option value="Research Work">Research Work</option>
+                <option value="Space Technology">Space Technology</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="Content Creation">Content Creation</option>
+                <option value="Others">Others</option>
+                </select>
+            </select>
+            
+            <label for="hobbies">Hobbies</label>
+            <textarea id="hobbies" name="hobbies" placeholder="Enter your hobbies" rows="4"></textarea>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </div>
+</body>
+</html>
