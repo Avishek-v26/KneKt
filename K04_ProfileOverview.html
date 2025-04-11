@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://img.freepik.com/free-vector/abstract-white-background_23-2148825581.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .profile-container {
+            width: 600px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+        .profile-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .profile-section {
+            margin-bottom: 20px;
+        }
+        .profile-section h3 {
+            font-size: 18px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .profile-section p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .profile-section p span {
+            font-weight: bold;
+            color: #333;
+        }
+        .back-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h2>Profile Overview</h2>
+        
+        <!-- Personal Info Section -->
+        <div class="profile-section">
+            <h3>Personal Info</h3>
+            <p><span>Name:</span> John Doe</p>
+            <p><span>Age:</span> 22</p>
+            <p><span>Phone:</span> +91 1234567890</p>
+            <p><span>Email:</span> john.doe@example.com</p>
+            <p><span>Residing State:</span> Jharkhand</p>
+        </div>
+        
+        <!-- Educational Details Section -->
+        <div class="profile-section">
+            <h3>Educational Details</h3>
+            <p><span>Qualification:</span> Bachelors</p>
+            <p><span>Qualifying Year:</span> 2023</p>
+            <p><span>Marks Obtained:</span> 85%</p>
+        </div>
+        
+        <!-- Interest Section -->
+        <div class="profile-section">
+            <h3>Interest</h3>
+            <p><span>Field of Interest:</span> Web Development</p>
+            <p><span>Hobbies:</span> Coding, Reading, Traveling</p>
+        </div>
+        
+        <!-- Back Button -->
+        <a href="form_page.html" class="back-button">Back to Form</a>
+    </div>
+</body>
+</html>

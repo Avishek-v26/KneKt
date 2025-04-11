@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Knekt</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at bottom left, #2a0845, #000);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      gap: 80px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 60px 80px;
+      border-radius: 24px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
+
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .left img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 50%;
+    }
+
+    .left h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .right {
+      flex: 2;
+    }
+
+    .right h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .right p {
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+
+    .social-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .social-buttons button {
+      padding: 14px;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      background: #fff;
+      color: #000;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 25px 0;
+      color: #aaa;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .divider::before, .divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #666;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      background-color: #1f1f1f;
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    .input-field::placeholder {
+      color: #888;
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin-bottom: 25px;
+    }
+
+    .forgot-password a {
+      color: #00ffd5;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 16px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .bottom-text {
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .bottom-text a {
+      color: #00ffd5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <img src="logo.jpg" alt="App Logo">
+      <h1>Knekt</h1>
+    </div>
+
+    <div class="right">
+      <h2>Login</h2>
+      <p>Sign into your account by entering your information below.</p>
+
+      <div class="social-buttons">
+        <button onclick="alert('Integrate Google Auth')">Google</button>
+        <button onclick="alert('Integrate Apple Auth')"> Apple</button>
+        <button onclick="alert('Integrate GitHub Auth')">🐱 GitHub</button>
+        <button onclick="alert('Integrate Microsoft Auth')">🪟 Microsoft</button>
+      </div>
+
+      <div class="divider">Or continue with</div>
+
+      <input type="email" id="email" class="input-field" placeholder="Email Address">
+      <input type="password" id="password" class="input-field" placeholder="Password">
+
+      <div class="forgot-password">
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button class="login-btn" onclick="emailPasswordLogin()">Login</button>
+
+      <div class="bottom-text">
+        Don’t have an account? <a href="createAcc_K02_UserRoles.html">Create Account</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Knekt. All rights reserved.
+  </footer>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCNtMwpPVWNv2Q37kPnLJqU9y9RbHvYCOA",
+      authDomain: "knekt-6303f.firebaseapp.com",
+      projectId: "knekt-6303f",
+      storageBucket: "knekt-6303f.appspot.com",
+      messagingSenderId: "242280531124",
+      appId: "1:242280531124:web:your-app-id" // Optional
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    function emailPasswordLogin() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      auth.signInWithEmailAndPassword(email, password)
+        .then(userCredential => {
+          alert("✅ Login successful!");
+          // Optionally redirect: window.location.href = "dashboard.html";
+        })
+        .catch(error => {
+          alert("❌ Login failed: " + error.message);
+        });
+        function submitForm(){
+            window.location.href = 'K05_HomePage.html'; // to be directed to the HOME page
+        }
+    }
+  </script>
+
+</body>
+</html>

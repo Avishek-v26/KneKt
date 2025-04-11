@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knekt Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .navbar .nav-btns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .navbar .nav-btns button {
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 20px;
+      padding: 0.8rem 1.4rem;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 2rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #cccccc;
+      margin-bottom: 2rem;
+    }
+
+    .hero .cta-button {
+      background: linear-gradient(90deg, #7b2ff7, #f107a3);
+      color: white;
+      font-size: 1rem;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .hero .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    .mockup-img {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    .mockup-img img {
+      max-width: 90%;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    }
+
+    .video-section {
+      display: flex;
+      justify-content: center;
+      margin: 4rem 2rem;
+    }
+
+    .video-section video {
+      width: 90%;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #1b1b2f;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #ccc;
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+      margin: 1rem;
+    }
+
+    .footer h3 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .footer a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🚀 Knekt</div>
+    <ul>
+      <li><a href="#">Create Team</a></li>
+      <li><a href="#">Join Team</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">Area of Details</a></li>
+      <li><a href="#">About us</a></li>
+    </ul>
+    <div class="nav-btns">
+      <a href="#" style="color:white;">Log in</a>
+      <button>Start for Free</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Connect. Collaborate. Create.</h1>
+    <p>Knekt – Where Connections Create Opportunities</p>
+    <button class="cta-button">Start for Free</button>
+
+    <div class="mockup-img">
+      <img src="knekt-logo.png" alt="Knekt Logo" />
+    </div>
+  </section>
+
+  <section class="video-section">
+    <video autoplay muted loop playsinline>
+      <source src="home.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-section">
+      <h3>Knekt</h3>
+      <p>Empowering collaboration for innovators, developers, and dreamers. Let’s build together.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Create Team</a>
+      <a href="#">Join Team</a>
+      <a href="#">Blogs</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Support</h3>
+      <a href="#">Contact Us</a>
+      <a href="#">FAQs</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Knekt. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

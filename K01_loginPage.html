@@ -70,11 +70,16 @@
         <form action="login_action.php" method="POST">
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+            <button type="submit" onclick = 'submitForm()'>Login</button>
         </form>
         <div class="create-account">
-            <p>Don't have an account? <a href="create_account.html">Create Account</a></p>
+            <p>Don't have an account? <a href="createAcc_K02_UserRoles.html">Create Account</a></p>
         </div>
     </div>
+    <script>
+        function submitForm(){
+            window.location.href = 'createAcc_K02_UserRoles.html'; // to be directed to the HOME page
+        }
+    </script>
 </body>
 </html>
