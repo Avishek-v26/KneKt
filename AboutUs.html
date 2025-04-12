@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Team</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at bottom left, #2a0845, #000);
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .team-image {
+      margin-bottom: 30px;
+    }
+
+    .team-image img {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ccc;
+      max-width: 500px;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+
+    button {
+      background-color: #624bff;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4c3ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>KneKt. Where connection creates opportunities</header>
+
+  <div class="container">
+    <div class="team-image">
+      <!-- You can replace with an actual team illustration -->
+      <img src="https://w7.pngwing.com/pngs/257/702/png-transparent-about-us-logo-business-logo-company-brand-service-icon-about-us-hd-miscellaneous-blue-text-thumbnail.png" alt="Team Illustration" >
+    </div>
+
+    <h2>Our Team, Our Pride</h2>
+    <p>
+        About KneKt...
+    </p>
+
+    <button onclick="createTeam()">Learn More</button>
+  </div>
+
+  <script>
+    function createTeam() {
+      alert("Team created successfully!");
+      // You can redirect to a new page or open a modal here
+    }
+  </script>
+</body>
+</html>

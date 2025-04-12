@@ -9,8 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script> -->
 
   <style>
     * {
@@ -51,11 +51,11 @@
     }
 
     .left img {
-      width: 80px;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 50%;
-    }
+  width: 300px; /* Increase width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px;
+  border-radius: 50%; /* Optional styling */
+}
 
     .left h1 {
       font-size: 28px;
@@ -185,7 +185,7 @@
 
   <div class="container">
     <div class="left">
-      <img src="logo.jpg" alt="App Logo">
+      <img src="officialKneKtLogo-removebg-preview.png" alt="KneKt Logo" width = 600px  height = 600px>
       <h1>Knekt</h1>
     </div>
 
@@ -206,10 +206,10 @@
       <input type="password" id="password" class="input-field" placeholder="Password">
 
       <div class="forgot-password">
-        <a href="#">Forgot password?</a>
+        <a href="forgotPassword.html">Forgot password?</a>
       </div>
 
-      <button class="login-btn" onclick="emailPasswordLogin()">Login</button>
+      <button class="login-btn" onclick="location.href='K05_HomePage.html'">Login</button>
 
       <div class="bottom-text">
         Don’t have an account? <a href="K02_createAcc_UserRoles.html">Create Account</a>
